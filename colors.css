@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('./images/crys.jpeg') no-repeat center center fixed; 
+    background-size: cover; 
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; 
+}
+
+.image-button {
+    display: block;
+    width: 80px; 
+    height: 80px; 
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px; 
+    cursor: pointer;
+    border-radius: 50%; 
+    border: none;
+    color: white;
+    background-color: black; 
+}
+
+.image-circle {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%;
+    border-color: black;
+    border-width: 2px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    .image-button {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .image-circle {
+        width: 100px;
+        height: 100px;
+        top: 15%; 
+    }
+
+    .button-row {
+        margin-bottom: 20px;
+    }
+}
