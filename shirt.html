@@ -9,24 +9,28 @@
 <body>
 
     <div class="button-row">
-        <button class="image-button" onclick="showImage('red')">1</button>
-        <button class="image-button" onclick="showImage('blue')">2</button>
-        <button class="image-button" onclick="showImage('green')">3</button>
+        <button class="image-button" onclick="showImage('red', this)">1</button>
+        <button class="image-button" onclick="showImage('blue', this)">2</button>
+        <button class="image-button" onclick="showImage('green', this)">3</button>
     </div>
     <div class="button-row">
-        <button class="image-button" onclick="showImage('yellow')">4</button>
-        <button class="image-button" onclick="showImage('grey')">5</button>
-        <button class="image-button" onclick="showImage('light-blue')">6</button>
-        <button class="image-button" onclick="showImage('pink')">7</button>
+        <button class="image-button" onclick="showImage('yellow', this)">4</button>
+        <button class="image-button" onclick="showImage('grey', this)">5</button>
+        <button class="image-button" onclick="showImage('light-blue', this)">6</button>
+        <button class="image-button" onclick="showImage('pink', this)">7</button>
     </div>
 
     <div id="image-display" class="image-circle"></div>
 
     <script>
-        function showImage(image) {
+        function showImage(image, button) {
             const imageDisplay = document.getElementById('image-display');
             imageDisplay.style.display = 'block';
             imageDisplay.style.backgroundImage = `url(images/${image}.png)`; 
+
+            const buttons = document.querySelectorAll('.image-button');
+            buttons.forEach(btn => btn.style.backgroundColor = 'black'); // Reset all buttons to black
+            button.style.backgroundColor = 'grey'; // Change the pressed button color
         }
     </script>
 

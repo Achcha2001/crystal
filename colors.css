@@ -30,6 +30,7 @@ body {
     border: none;
     color: white;
     background-color: black; 
+    transition: background-color 0.3s;
 }
 
 .image-circle {
@@ -46,7 +47,6 @@ body {
     transform: translateX(-50%);
     display: none;
 }
-
 
 @media (max-width: 600px) {
     .image-button {
